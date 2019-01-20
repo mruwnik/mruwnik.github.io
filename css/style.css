@@ -1,0 +1,41 @@
+/* some style */
+
+.left {
+    float: left;
+}
+
+.canvas {
+    width: 68%;
+}
+
+.canvas.grab {cursor: -webkit-grab; cursor: grab;}
+.canvas.grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
+.canvas.move {cursor: move;}
+.canvas.crosshair {cursor: crosshair;}
+.canvas.pointer {cursor: pointer;}
+
+
+.side-bar {
+    width: 350px;
+    margin-right: 10px;
+}
+
+.options-container {
+    border-style: solid;
+}
+
+.item-handler {
+    margin: 4px;
+    padding: 10px;
+}
+
+.item-handler * {
+    pointer-events: none;
+}
+.item-handler button {
+    pointer-events: all;;
+}
+
+.item-handler.selected {
+    background-color: lightblue;
+}
