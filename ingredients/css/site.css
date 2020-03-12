@@ -1,0 +1,46 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#current-items {
+  margin-top: 10px;
+}
+#current-items .filter {
+  margin: 10px;
+}
+#current-items .filter .filter-type {
+  background-color: teal;
+  padding: 5px;
+}
+.search-container {
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+.search-container details {
+  margin-top: 10px;
+}
+.search-container details summary {
+  font-size: 20px;
+  font-weight: bold;
+}
+.search-container .item-checkbox {
+  display: inline-block;
+  width: 105px;
+}
+.recipies {
+  flex-basis: 0;
+  flex-grow: 999;
+}
+.results-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.recipie {
+  text-align: center;
+  margin: 20px;
+  border-style: solid;
+  border-color: red;
+}
+.recipie .details span {
+  padding-left: 10px;
+}
