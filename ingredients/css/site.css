@@ -18,6 +18,7 @@
 }
 .search-container details {
   margin-top: 10px;
+  margin-left: 10px;
 }
 .search-container details summary {
   font-size: 20px;
