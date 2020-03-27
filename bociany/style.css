@@ -1,0 +1,40 @@
+@media (max-width:760px)  {
+    .size-inputs {
+        font-size: 3em;
+        margin: 20px;
+    }
+    .size-inputs input[type="text"], .size-inputs select {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .size-inputs > input, .size-inputs > label {
+        display: block;
+    }
+
+    .results {
+        font-size: 1.5em;
+    }
+
+    #resultsTable td {
+        padding: 0.25em 0.5em;
+    }
+}
+
+@media (min-width:760px)  {
+    .size-inputs {
+        margin: 20px;
+    }
+
+    .results {
+        margin: 20px;
+    }
+
+    #resultsTable td {
+        padding: 5px 10px;
+    }
+}
+
+#resultsTable td.avg {
+    font-weight: bold;
+}

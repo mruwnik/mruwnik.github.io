@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="size-inputs">
+            <label for="diameter">Średnica (cm)</label>
+            <input name="diameter" id="diameter" type="text" inputmode="numeric"
+                   pattern="[0-9]*(\.[0-9]*)?" placeholder="wartość między 80 a 230" />
+            <label for="diameter">Wysokość (cm)</label>
+            <input name="height" id="height" type="text" inputmode="numeric"
+                   pattern="[0-9]*(\.[0-9]*)?" placeholder="wartość między 10 a 140"/>
+
+            <label for="density">Coś w rodzaju wskaźnika ubicia/gęstości :D</label>
+            <select id="density" selected="1">
+                <option value="1">Normalne</option>
+                <option value="2">Ubite</option>
+            </select>
+        </div>
+        <div class="results">
+            <div>Oczekiwana masa gniazda o podanych wymiarach:</div>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th class="model"></th>
+                        <th colspan="3">Dolny przedział ufności</th>
+                        <th rowspan="2">Średnia</th>
+                        <th colspan="3">Górny przedział ufności</th>
+                    </tr>
+                    <tr>
+                        <th class="model"></th>
+                        <th>95%</th> <th>90%</th> <th>80%</th>
+                        <th>80%</th> <th>90%</th> <th>95%</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsRows">
+                </tbody>
+            </table>
+        </div>
+        <script type="text/javascript" src="weights.js"></script>
+        <script type="text/javascript" src="calc.js"></script>
+    </body>
+</html>
