@@ -1,42 +1,88 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="size-inputs">
-            <label for="diameter">Średnica (cm)</label>
-            <input name="diameter" id="diameter" type="text" inputmode="numeric"
-                   pattern="[0-9]*(\.[0-9]*)?" placeholder="wartość między 80 a 230" />
-            <label for="diameter">Wysokość (cm)</label>
-            <input name="height" id="height" type="text" inputmode="numeric"
-                   pattern="[0-9]*(\.[0-9]*)?" placeholder="wartość między 10 a 140"/>
-
-            <label for="density">Coś w rodzaju wskaźnika ubicia/gęstości :D</label>
-            <select id="density" selected="1">
-                <option value="1">Normalne</option>
-                <option value="2">Ubite</option>
-            </select>
+        <div class="logos">
+            <img src="images/life.jpg" alt="life" height="100px" />
+            <img src="images/lifeciconia_pl_logo.png" height="100px" alt="LifeConiaPL"/>
+            <img src="images/polskietop_logo.png" height="100px" alt="PolskieTOP"/>
         </div>
-        <div class="results">
-            <div>Oczekiwana masa gniazda o podanych wymiarach:</div>
-            <table id="resultsTable">
-                <thead>
-                    <tr>
-                        <th class="model"></th>
-                        <th colspan="3">Dolny przedział ufności</th>
-                        <th rowspan="2">Średnia</th>
-                        <th colspan="3">Górny przedział ufności</th>
-                    </tr>
-                    <tr>
-                        <th class="model"></th>
-                        <th>95%</th> <th>90%</th> <th>80%</th>
-                        <th>80%</th> <th>90%</th> <th>95%</th>
-                    </tr>
-                </thead>
-                <tbody id="resultsRows">
-                </tbody>
-            </table>
+        <div>
+            <h1 class="title">Kalkulator</h1>
+            <h2 class="sub-title">masa gniazda bociana białego</h2>
+        </div>
+        <div>
+            <div class="contents">
+                <div class="text">
+                    Bocian biały <i>Ciconia ciconia</i> gniazduje w bezpośredniej bliskości człowieka, często na dachach budynków, kominach, słupach energetycznych itp. Ponieważ bociany używają swoich gniazd przez wiele lat, i co roku je dobudowywują, mogą one osiągać ogromne rozmiary (wysokość i średnica do ponad 2 m, patrz fotografie poniżej) i masę ponad 1,5 tony. Stwarza to zagrożenie uszkodzeniem a nawet zawaleniem się konstrukcji oraz zagraża bezpieczeństwu ludzi. Kluczowa w ocenie zagrożenia jest znajomość masy gniazda. Niniejszy kalkulator pozwala oszacować masę gniazda bociana z zaledwie dwóch pomiarów (wysokości i średnicy), które można wykonać z ziemi, np. z użyciem dalmierza. Pełne wyniki tego podejścia i więcej informacji o gniazdach bocianów i zastosowanej metodzie znajdziesz w artykule Zbyryt i inni (submitted)
+                </div>
+                <div class="text"><b>By rozpocząć,</b> wpisz wymiary gniazda (w centymetrach) w poniższe okienka i wybierz czy gniazdo jest ubite czy normalnej gęstości (patrz poniżej). </div>
+                <div class="size-inputs">
+                    <label for="diameter">Średnica (cm)</label>
+                    <input name="diameter" id="diameter" type="text" inputmode="numeric"
+                           pattern="[0-9]*(\.[0-9]*)?" placeholder="wartość między 80 a 230" />
+                    <br/>
+                    <label for="diameter">Wysokość (cm)</label>
+                    <input name="height" id="height" type="text" inputmode="numeric"
+                           pattern="[0-9]*(\.[0-9]*)?" placeholder="wartość między 10 a 140"/>
+
+                   <br/>
+                    <label for="density">Wskaźnik ubicia materiału gniazdowego</label>
+                    <select id="density" selected="1">
+                        <option value="1">Normalne</option>
+                        <option value="2">Ubite</option>
+                    </select>
+                </div>
+                <div class="text">
+                    Wyświetlone zostaną wyniki dla trzech najlepszych równań (modeli) szacujących masę. Szacowana, przeciętna masa gniazda o podanych wymiarach wyświetlona jest w kolumnie „Średnia”. Dolne (po lewej stronie) i górne (po prawej stronie) kolumny zawierają predykcyjne przedziały ufności dla oszacowania średniej, na trzech predefiniowanych poziomach.
+                </div>
+            </div>
+            <div class="results">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th class="desc" colspan="8"><b>Przewidywana masa gniazda w kg</b></th>
+                        </tr>
+                        <tr class="dark">
+                            <th rowspan="2" class="model"></th>
+                            <th colspan="3">Dolny przedział ufności</th>
+                            <th rowspan="2">Średnia</th>
+                            <th colspan="3">Górny przedział ufności</th>
+                        </tr>
+                        <tr class="light">
+                            <th>95%</th> <th>90%</th> <th>80%</th>
+                            <th>80%</th> <th>90%</th> <th>95%</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsRows">
+                    </tbody>
+                </table>
+            </div>
+            <div class="text">
+                <b>Wskaźnik ubicia gniazda.</b> Opcja wyjściowa to gniazdo „normalne” (takie gniazda występują najczęściej, patrz fot. 1A i 1B poniżej), „gniazda” ubite charakteryzują się większą gęstością materiału gniazdowego (patrz Fot. 1C, 1D) – są cięższe, a równanie szacujące masę jest dla nich inne.
+            </div>
+            <div class="images">
+                <div class="subtitled-img">
+                    <img src="images/bocian-multi.jpg" alt="Obrazy gniazda" width="640px" />
+                    <span class="subtitle">Fot. 1. Gniazda "normalne" (A, B) i "ubite" (C, D). Kliknij na fotografię aby powiększyć</span>
+                </div>
+                <div class="subtitled-img" style="width: 456px">
+                    <img src="images/bocian.jpg" alt="Bocian na gnieździe" height="608px"/>
+                    <span class="subtitle">Fot. 2. Używane przez wiele lat gniazda bocianów mogą osiągać 2 m wysokości i ważyć ponad 1,5 tony</span>
+                </div>
+            </div>
+            <div class="text">
+                <b>Rekomendowany sposób cytowania kalkulatora:</b>
+                Jeżeli korzystasz z kalkulatora w swoich opracowaniach, ekspertyzach, pracy naukowej, cytuj:
+                Zbyryt A., Dylewski Ł., Neubauer G. 2020. An on-line calculator for predicting white stork nest mass from its size. Available at:
+                <script type="text/javascript">
+                    document.write('<a href="' + window.location.href + '">' + window.location.href + '</a>');
+                </script>
+            </div>
+            <div class="text">Badania sfinansowano w ramach projektu LIFE 15 NAT/PL/000728 pt. "Ochrona bociana białego w dolinach rzecznych wschodniej Polski"  realizowanego przez Polskie Towarzystwo Ochrony Ptaków</div>
         </div>
         <script type="text/javascript" src="weights.js"></script>
         <script type="text/javascript" src="calc.js"></script>

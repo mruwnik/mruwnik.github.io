@@ -7,9 +7,10 @@ function formatNum(num) {
     return num ? (Math.round((num + 0.00001) * 100) / 100) : '';
 }
 
-function makeRow(model, values){
+function makeRow(model, values, style){
     [low_95, low_90, low_80, av, high_80, high_90, high_95] = values || [];
-    return '<tr class="resultsRow">' +
+    style = style || "light";
+    return '<tr class="resultsRow ' + style + '">' +
         `      <td class="model">${model}</td>` +
         `      <td class="low-95 number">${formatNum(low_95)}</td>` +
         `      <td class="low-90 number">${formatNum(low_90)}</td>` +
@@ -24,7 +25,8 @@ function makeRow(model, values){
 function updateResults(results) {
     const rowsContainer = document.getElementById("resultsRows");
     rowsContainer.innerHTML = models.reduce(function(rows, model, i) {
-        return rows + makeRow(model, results[i]);
+        var style = (i % 2 ? 'light' : 'dark');
+        return rows + makeRow(model, results[i], style);
     }, '');
 }
 

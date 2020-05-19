@@ -22,6 +22,29 @@
 }
 
 @media (min-width:760px)  {
+    body {
+        margin: 40px;
+    }
+
+    .text {
+        width: 800px;
+        margin-bottom: 20px;
+    }
+
+    .images {
+        margin: 20px;
+        display: flex;
+    }
+
+    .logos {
+        left: 500px;
+    }
+
+    .subtitled-img {
+        width: 640px;
+        padding: 10px;
+    }
+
     .size-inputs {
         margin: 20px;
     }
@@ -37,4 +60,18 @@
 
 #resultsTable td.avg {
     font-weight: bold;
+}
+
+.results .desc {
+    background-color: #5b9bd5;
+    color: white;
+    padding: 5px;
+}
+
+.results .dark {
+    background-color: #d1deef;
+}
+
+.results .light {
+    background-color: #e9eff7;
 }
