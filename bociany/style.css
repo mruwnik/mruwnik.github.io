@@ -19,6 +19,14 @@
     #resultsTable td {
         padding: 0.25em 0.5em;
     }
+
+    .text {
+        margin-bottom: 20px;
+    }
+
+    .subtitled-img {
+        padding: 10px;
+    }
 }
 
 @media (min-width:760px)  {
@@ -36,8 +44,15 @@
         display: flex;
     }
 
+    .title {
+        display: flex;
+        font-size: 30px;
+        font-weight: bold;
+        align-items: center;
+    }
+
     .logos {
-        left: 500px;
+        margin-left: 100px;
     }
 
     .subtitled-img {
