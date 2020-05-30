@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div class="languages">
+            <a href="./index.html">PL</a>
+            <a href="./en.html">EN</a>
+        </div>
         <div class="title">
             Kalkulator
             <div class="logos">
@@ -64,28 +68,31 @@
                 </table>
             </div>
             <div class="text">
-                <b>Wskaźnik ubicia gniazda.</b> Opcja wyjściowa to gniazdo „normalne” (takie gniazda występują najczęściej, patrz fot. 1A i 1B poniżej), „gniazda” ubite charakteryzują się większą gęstością materiału gniazdowego (patrz Fot. 1C, 1D) – są cięższe, a równanie szacujące masę jest dla nich inne.
+                <b>Wskaźnik ubicia gniazda.</b> Opcja wyjściowa to gniazdo „normalne” (takie gniazda występują najczęściej, patrz fot. 1A i 1B poniżej), gniazda „ubite” charakteryzują się większą gęstością materiału gniazdowego (patrz Fot. 1C, 1D) – są cięższe, a równanie szacujące masę jest dla nich inne.
             </div>
             <div class="images">
                 <div class="subtitled-img">
-                    <img src="images/bocian-multi.jpg" alt="Obrazy gniazda" width="640px" />
+                    <a href="raw/images-full/bocian-multi.jpg"><img src="images/bocian-multi.jpg" alt="Obrazy gniazda" width="640px" /></a>
                     <span class="subtitle">Fot. 1. Gniazda "normalne" (A, B) i "ubite" (C, D). Kliknij na fotografię aby powiększyć</span>
                 </div>
                 <div class="subtitled-img" style="width: 456px">
-                    <img src="images/bocian.jpg" alt="Bocian na gnieździe" height="608px"/>
+                    <a href="raw/images-full/bocian.jpg"><img src="images/bocian.jpg" alt="Bocian na gnieździe" height="608px"/></a>
                     <span class="subtitle">Fot. 2. Używane przez wiele lat gniazda bocianów mogą osiągać 2 m wysokości i ważyć ponad 1,5 tony</span>
                 </div>
             </div>
             <div class="text">
                 <b>Rekomendowany sposób cytowania kalkulatora:</b>
                 Jeżeli korzystasz z kalkulatora w swoich opracowaniach, ekspertyzach, pracy naukowej, cytuj:
-                Zbyryt A., Dylewski Ł., Neubauer G. 2020. An on-line calculator for predicting white stork nest mass from its size. Available at:
+                <div>Zbyryt A., Dylewski Ł., Neubauer G. 2020. An on-line calculator for predicting white stork nest mass from its size. Available at:</div>
                 <script type="text/javascript">
                     document.write('<a href="' + window.location.href + '">' + window.location.href + '</a>');
                 </script>
             </div>
             <div class="text">Badania sfinansowano w ramach projektu LIFE 15 NAT/PL/000728 pt. "Ochrona bociana białego w dolinach rzecznych wschodniej Polski"  realizowanego przez Polskie Towarzystwo Ochrony Ptaków</div>
         </div>
+        <script type="text/javascript">
+         const models = ["Model 1", "Model 2", "Model 3", "Uśrednione"];
+        </script>
         <script type="text/javascript" src="weights.js"></script>
         <script type="text/javascript" src="calc.js"></script>
     </body>

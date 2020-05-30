@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="languages">
+            <a href="./index.html">PL</a>
+            <a href="./en.html">EN</a>
+        </div>
+        <div class="title">
+            Calculator
+            <div class="logos">
+                <img src="images/life.jpg" alt="life" height="60px" />
+                <img src="images/lifeciconia_pl_logo.png" height="60px" alt="LifeConiaPL"/>
+                <img src="images/polskietop_logo.png" height="60px" alt="PolskieTOP"/>
+            </div>
+        </div>
+        <div>
+            <h2 class="sub-title">the mass of white stork nests</h2>
+        </div>
+        <div>
+            <div class="contents">
+                <div class="text">
+                    The white stork <i>Ciconia ciconia</i> nests next to humans, often on the roofs of buildings, chimneys, utility poles, etc. Storks reuse their nests over multiple years, adding to them each year, therefore they can reach massive dimensions (with heights and diameters over 2m, see the photographs below) and a mass of over 1.5 metric tons. This can damage, or even cause the collapse of structures and is a danger to humans. Knowing the mass of a nest is crucial in establishing whether it poses a danger. This calculator allows the estimation of the mass of stork nests from only two measurements (height and diameter) which can be taken from the ground, e.g. using a rangefinder. The full results of this approach, along with more information about stork nests and the methods used can be found in the article by Zbyryt et al. (submitted)
+                </div>
+                <div class="text"><b>To start,</b> enter the nest's measurements (in centimeters) into the following inputs and select whether the nest is dense or normally compacted (see below).</div>
+                <div class="size-inputs">
+                    <label for="diameter">Diameter (cm)</label>
+                    <input name="diameter" id="diameter" type="text" inputmode="numeric"
+                           pattern="[0-9]*(\.[0-9]*)?" placeholder="a value between 80 and 229" />
+                    <br/>
+                    <label for="diameter">Height (cm)</label>
+                    <input name="height" id="height" type="text" inputmode="numeric"
+                           pattern="[0-9]*(\.[0-9]*)?" placeholder="a value between 10 and 139"/>
+
+                   <br/>
+                    <label for="density">Nest compactness index</label>
+                    <select id="density" selected="1">
+                        <option value="1">Normal</option>
+                        <option value="2">Dense</option>
+                    </select>
+                </div>
+                <div class="text">
+                    Results will be shown for the best three equations (models) estimating mass. The estimated average mass of a nest with the given dimensions is displayed in the "Average" column. The lower (on the left side) and upper (on the right side) columns contain the predicted confidence intervals for the estimated average, on three predefined levels.
+                </div>
+            </div>
+            <div class="results">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th class="desc" colspan="8"><b>Estimated nest mass in kg</b></th>
+                        </tr>
+                        <tr class="dark">
+                            <th rowspan="2" class="model"></th>
+                            <th colspan="3">Lower confidence interval</th>
+                            <th rowspan="2">Average</th>
+                            <th colspan="3">Upper confidence level</th>
+                        </tr>
+                        <tr class="light">
+                            <th>95%</th> <th>90%</th> <th>80%</th>
+                            <th>80%</th> <th>90%</th> <th>95%</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsRows">
+                    </tbody>
+                </table>
+            </div>
+            <div class="text">
+                <b>Nest compactness index.</b> The default value is "normal" nests (this is the most common type of nest, see photo 1A and 1B below), "dense" nests are characterized by the nest material being more compacted (see photo 1C, 1D) - they are heavier and the equation estimating their mass is different.
+            </div>
+            <div class="images">
+                <div class="subtitled-img">
+                    <a href="raw/images-full/bocian-multi.jpg"><img src="images/bocian-multi.jpg" alt="Nest images" width="640px" /></a>
+                    <span class="subtitle">photo 1. "Normal" (A, B) and "dense" (C, D) nests. Click on the image to magnify.</span>
+                </div>
+                <div class="subtitled-img" style="width: 456px">
+                    <a href="raw/images-full/bocian.jpg"><img src="images/bocian.jpg" alt="Stork in nest" height="608px"/></a>
+                    <span class="subtitle">photo 2. Nests used for multiple years may be over 2m high and weigh over 1.5 metric tons.</span>
+                </div>
+            </div>
+            <div class="text">
+                <b>Recommended way of citing the calculator:</b>
+                If you use the calculator in your reports, evaluations or articles, cite:
+                <div> Zbyryt A., Dylewski Ł., Neubauer G. 2020. An on-line calculator for predicting white stork nest mass from its size. Available at:</div>
+                <script type="text/javascript">
+                    document.write('<a href="' + window.location.href + '">' + window.location.href + '</a>');
+                </script>
+            </div>
+            <div class="text">This study funded as part of the LIFE 15 NAT/PL/000728 project titled "Conservation of White Stork in the River Valleys of Eastern Poland" carried out by Polskie Towarzystwo Ochrony Ptaków</div>
+        </div>
+        <script type="text/javascript">
+           const models = ["Model 1", "Model 2", "Model 3", "Averaged"];
+        </script>
+        <script type="text/javascript" src="weights.js"></script>
+        <script type="text/javascript" src="calc.js"></script>
+    </body>
+</html>

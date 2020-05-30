@@ -73,6 +73,11 @@
     }
 }
 
+.languages {
+    position: absolute;
+    top: 10px;
+}
+
 #resultsTable td.avg {
     font-weight: bold;
 }

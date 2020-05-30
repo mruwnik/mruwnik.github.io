@@ -1,4 +1,3 @@
-const models = ["Model 1", "Model 2", "Model 3", "Uśrednione"];
 const diameter = document.getElementById("diameter");
 const height = document.getElementById("height");
 const density = document.getElementById("density");
