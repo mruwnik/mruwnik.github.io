@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="languages">
+            <a href="./index.html">PL</a>
+            <a href="./en.html">EN</a>
+            <a href="./es.html">ES</a>
+            <a href="./fr.html">FR</a>
+            <a href="./ru.html">RU</a>
+        </div>
+        <div class="title">
+            Kalkulator
+            <div class="logos">
+                <img src="images/life.jpg" alt="life" height="60px" />
+                <img src="images/lifeciconia_pl_logo.png" height="60px" alt="LifeConiaPL"/>
+                <img src="images/polskietop_logo.png" height="60px" alt="PolskieTOP"/>
+            </div>
+        </div>
+        <div>
+            <h2 class="sub-title">permet de calculer la masse d’un nid de cigogne</h2>
+        </div>
+        <div>
+            <div class="contents">
+                <div class="text">
+                    La Cigogne blanche (<i>Ciconia ciconia</i>) niche souvent dans l’environnement immédiat des hommes, construisant son nid sur les toits des bâtiments, les cheminées, les poteaux électriques etc. Les cigognes utilisent le même nid pendant de nombreuses années et le consolident en rajoutant des matériaux tous les ans, de telle sorte qu’il peut atteindre des dimensions importantes; jusqu’à  2m de hauteur et de diamètre (voir image ci-dessous), et une masse de plus de 1500kg. Cela crée un risque d’endommagement et même d’effondrement de la construction et menace la sécurité des hommes.
+Pour bien estimer le danger connaître la masse de nid est donc cruciale.
+L’outil de calcul proposé ici permet d’évaluer la masse d’un nid de cigogne avec seulement 2 données (sa hauteur et son diamètre). Les mesures peuvent être effectuées depuis le sol à l’aide d’un télémètre.  Pour  les résultats complets obtenus par cette méthode et plus d’informations sur les nids de cigognes, consultez l’article (Zbyryt, Dylewski , Neubauer… - adresse en fin de page).
+                </div>
+                <div class="text"><b>Pour commencer,</b> renseignez les mesures du nid (en centimètres) dans les cases ci-dessous et choisissez la catégorie de densité du nid – nid normal ou nid très compact, tassé.</div>
+                <div class="size-inputs">
+                    <label for="diameter">Diamètre (cm)</label>
+                    <input name="diameter" id="diameter" type="text" inputmode="numeric"
+                           pattern="[0-9]*(\.[0-9]*)?" placeholder="Valeur entre 80 et 229" />
+                    <br/>
+                    <label for="diameter">Hauteur (cm)</label>
+                    <input name="height" id="height" type="text" inputmode="numeric"
+                           pattern="[0-9]*(\.[0-9]*)?" placeholder="Valeur entre 10 et 139"/>
+
+                   <br/>
+                   <label for="density">Facteur de la densité du matériau de nid</label>
+                    <select id="density" selected="1">
+                        <option value="1">Normal</option>
+                        <option value="2">Compact</option>
+                    </select>
+                </div>
+                <div class="text">
+                    Les résultats des 3 meilleurs équations (modèles) évaluant la masse seront affichés. La masse moyenne estimée pour le nid correspondant aux mesures renseignées s’affiche dans la colonne «moyenne». Les colonnes en bas (à gauche) et en haut (à droite) contiennent les indications prédictives des intervalles de fiabilité  pour l’évaluation de la moyenne sur les 3 niveaux prédéfinis.
+                </div>
+            </div>
+            <div class="results">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th class="desc" colspan="8"><b>La masse d’un nid estimée en kilogrammes</b></th>
+                        </tr>
+                        <tr class="dark">
+                            <th rowspan="2" class="model"></th>
+                            <th colspan="3">Intervalle de fiabilité bas</th>
+                            <th rowspan="2">Moyenne</th>
+                            <th colspan="3">Intervalle de fiabilité haut</th>
+                        </tr>
+                        <tr class="light">
+                            <th>95%</th> <th>90%</th> <th>80%</th>
+                            <th>80%</th> <th>90%</th> <th>95%</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsRows">
+                    </tbody>
+                </table>
+            </div>
+            <div class="text">
+                <b>L’indicateur du compactage du nid.</b> Option par défaut -  nid «normal» - cette catégorie est la plus fréquente (voir image 1A,  1B, ci-dessous)
+                Un  nid compact (tassé) se démarque par la plus grande densité des matériaux utilisés  pour la construction (voir image 1C, 1D) – il est plus lourd et l’équation pour évaluer sa masse est différente.
+            </div>
+            <div class="images">
+                <div class="subtitled-img">
+                    <a href="images/bocian-multi-full.jpg"><img src="images/bocian-multi.jpg" alt="Nid normal, compact" width="640px" /></a>
+                    <span class="subtitle">Image 1. Nid normal (A, B), compact (C,D) pour agrandir cliquez sur l’image</span>
+                </div>
+                <div class="subtitled-img" style="width: 456px">
+                    <a href="images/bocian_full.jpg"><img src="images/bocian.jpg" alt="Les nids occupés" height="608px"/></a>
+                    <span class="subtitle">Image 2. Les nids occupés durant des années peuvent atteindre 2m de hauteur et peser plus de 1500kg.</span>
+                </div>
+            </div>
+            <div class="text">
+                <b>Recommandation:</b>
+                si vous utilisez le kalkulator dans vos travaux, expertises ou monographies citez:
+                <div>
+                    Zbyryt A., Dylewski Ł., Neubauer G. 2020. An on-line calculator for predicting white stork nest mass from its size. Available at:
+                    <script type="text/javascript">
+                       document.write('<a href="' + window.location.href + '">' + window.location.href + '</a>');
+                    </script>
+                </div>
+            </div>
+            <div class="text">Les recherches ont été financées dans le cadre du projet «Protection de la Cigogne Blanche dans les vallées des rivières de Pologne orientale» réalisé par la Société Polonaise de la Protection des Oiseaux (PTOP)</div>
+        </div>
+        <script type="text/javascript">
+         const models = ["Modèle 1", "Modèle 2", "Modèle 3", "Moyenne"];
+        </script>
+        <script type="text/javascript" src="weights.js"></script>
+        <script type="text/javascript" src="calc.js"></script>
+    </body>
+</html>
