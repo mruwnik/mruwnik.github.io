@@ -2,40 +2,81 @@ body {
   color: black;
 }
 
+.input-label {
+  width: 140px;
+  display: inline-flex;
+}
+
+summary {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 section {
-  margin-top: 40px;
+  margin: 20px 5px;
 }
 
-li.species-item.selected {
-  color: red;
+section .header {
+  font-size: 26px;
+  font-weight: bold;
 }
 
-.container {
-  display: flex;
+.edit-species details {
+  margin-left: 10px;
 }
 
-#species-container .title {
-  display: block;
-  font-size: 200%;
+.edit-species .list-multi-checkbox {
+  margin: 20px 0px;
 }
 
-.taxonomy, .clade {
-  width: 315px;
+.edit-species .multi-checkbox .type-select .fancy-checkbox-contents {
+  color: #444;;
+  border: 1px solid #CCC;
+  margin: 5px;
+  background: #DDD;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
-.taxonomy, .clade-type {
-  display: inline-block;
-  width: 100px;
-}
-
-.symptoms .add-symptom {
+.edit-species .multi-checkbox .type-select input {
   display: none;
 }
 
-.symptoms[open] .add-symptom {
-  display: inline;
+.edit-species .multi-checkbox .type-select input[type=checkbox] + label .fancy-checkbox-contents {
+  border: 5px solid #DDD;
 }
 
-details {
-  margin-left: 15px;
+.edit-species .multi-checkbox .type-select input[type=checkbox]:checked + label .fancy-checkbox-contents {
+  box-shadow: 0 0 5px 1px rgba(0,0,200.6);
+}
+
+.edit-species .part-types {
+  width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.edit-species .part-types .type-select label .fancy-checkbox-contents {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.edit-species .part-types .type-select label .fancy-checkbox-contents img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.edit-species .part-types .type-select label .tooltiptext {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+.edit-species .part-types .type-select label:hover .tooltiptext {
+  display: inherit;
 }
