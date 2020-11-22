@@ -1,0 +1,130 @@
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+}
+
+html body .full-height {
+  height: 100%;
+}
+
+html body .scroll-bar {
+  position: absolute;
+  right: 10px;
+  width: 50px;
+}
+
+html body .popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.4);
+}
+
+html body .popup form {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 15%;
+}
+
+html body .popup form .input-item label {
+  min-width: 60px;
+  display: inline-block;
+}
+
+html body .popup form .form-buttons {
+  margin: 10px;
+}
+
+html body .popup form .form-buttons * {
+  margin: 20px;
+}
+
+html body .calendar {
+  display: grid;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+  grid-template-rows: 50% 50%;
+}
+
+html body .calendar .day-header {
+  border: 2px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+
+html body .calendar .day.today {
+  border: 2px solid red;
+}
+
+html body .calendar .day {
+  border: 2px solid black;
+  overflow: auto;
+}
+
+html body .calendar .day .day-header {
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+html body .calendar .day .orders {
+  padding-left: 25px;
+}
+
+html body .calendar .day .orders .actions {
+  display: none;
+  float: right;
+}
+
+html body .calendar .day .orders .order:hover .actions {
+  display: inline;
+}
+
+html body .calendar .day .orders .order.pending {
+  color: grey;
+}
+
+html body .calendar .day .orders .order.fulfilled {
+  color: red;
+}
+
+html body .calendar .day .orders .who {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html body .calendar .day .orders .products {
+  padding-left: 25px;
+}
+
+html body .calendar .day .orders .products .product {
+  margin-bottom: 5px;
+}
+
+html body .calendar .day .orders .products .product .product-amount {
+  width: 40px;
+  margin-right: 10px;
+  max-height: 5px;
+}
+
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
