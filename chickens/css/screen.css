@@ -16,6 +16,12 @@ html body .scroll-bar {
   width: 50px;
 }
 
+html body .scroll-bar #scroll-down {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
 html body .popup {
   position: fixed;
   height: 100%;
@@ -46,16 +52,84 @@ html body .popup form .form-buttons * {
   margin: 20px;
 }
 
-html body .calendar {
-  display: grid;
-  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
-  grid-template-rows: 50% 50%;
+html body .scroll-button {
+  display: none;
+}
+
+@media (max-width: 800px) {
+
+  html body .scroll-bar {
+    display: none;
+  }
+  
+  html body .scroll-button {
+    width: 100%;
+    font-size: 3em;
+    display: inherit;
+  }
+  
+  
+  
+  html body .popup form {
+    background-color: #fefefe;
+    margin: 3% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+  
+  html body .popup form .product-items-edit {
+    margin-top: 1.5em;
+  }
+  
+  
+  
+  html body .popup form .product-items-edit .product-item-edit label {
+    display: none;
+  }
+  
+  
+  
+  html body .calendar .day {
+    min-height: 12em;
+  }
+
+}
+
+@media (min-width: 800px) {
+
+  
+  
+  html body .popup form {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 15%;
+  }
+  
+  html body .calendar {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  html body .calendar {
+    display: grid;
+    grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+    grid-template-rows: 50% 50%;
+  }
+
 }
 
 html body .calendar .day-header {
   border: 2px solid black;
   text-align: center;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 html body .calendar .day.today {
@@ -101,18 +175,26 @@ html body .calendar .day .orders .who {
   text-overflow: ellipsis;
 }
 
-html body .calendar .day .orders .products {
-  padding-left: 25px;
-}
-
-html body .calendar .day .orders .products .product {
+html body .calendar .day .product {
   margin-bottom: 5px;
 }
 
-html body .calendar .day .orders .products .product .product-amount {
-  width: 40px;
+html body .calendar .day .product .product-name {
+  width: 5em;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   margin-right: 10px;
+}
+
+html body .calendar .day .product .product-amount {
+  width: 40px;
   max-height: 5px;
+}
+
+html body .calendar .day .summary {
+  margin-top: 10px;
 }
 
 input::-webkit-outer-spin-button {
