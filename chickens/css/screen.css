@@ -62,7 +62,7 @@ html body .scroll-button {
     display: none;
   }
   
-  html body .scroll-button {
+  html body .menu-button {
     width: 100%;
     font-size: 3em;
     display: inherit;
@@ -133,7 +133,7 @@ html body .calendar .day-header {
 }
 
 html body .calendar .day.today {
-  border: 2px solid red;
+  border: 0.4em solid red;
 }
 
 html body .calendar .day {
@@ -195,6 +195,35 @@ html body .calendar .day .product .product-amount {
 
 html body .calendar .day .summary {
   margin-top: 10px;
+}
+
+html body .stock-modal .add-product {
+  float: right;
+}
+
+html body .stock-modal .stock-product {
+  margin: 1em 0;
+}
+
+html body .stock-modal .stock-product .product-name {
+  display: inline-block;
+  width: 6em;
+}
+
+html body .stock-modal .stock-product .stock-product-amount {
+  display: inline-block;
+}
+
+html body .stock-modal .stock-product .stock-product-amount .input-item {
+  display: inline;
+}
+
+html body .stock-modal .stock-product .stock-product-amount .input-item input {
+  width: 40px;
+}
+
+html body .stock-modal .stock-product .stock-product-amount .input-item label {
+  display: none;
 }
 
 input::-webkit-outer-spin-button {
