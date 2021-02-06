@@ -31,7 +31,7 @@ html body .popup {
   background-color: rgba(0,0,0,0.4);
 }
 
-html body .popup form {
+html body .popup .popup-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -39,16 +39,16 @@ html body .popup form {
   width: 15%;
 }
 
-html body .popup form .input-item label {
+html body .popup .popup-content .input-item label {
   min-width: 60px;
   display: inline-block;
 }
 
-html body .popup form .form-buttons {
+html body .popup .popup-content ..popup-form-buttons {
   margin: 10px;
 }
 
-html body .popup form .form-buttons * {
+html body .popup .popup-content ..popup-form-buttons * {
   margin: 20px;
 }
 
@@ -70,7 +70,7 @@ html body .scroll-button {
   
   
   
-  html body .popup form {
+  html body .popup .popup-content {
     background-color: #fefefe;
     margin: 3% auto;
     padding: 20px;
@@ -78,13 +78,13 @@ html body .scroll-button {
     width: 60%;
   }
   
-  html body .popup form .product-items-edit {
+  html body .popup .popup-content .product-items-edit {
     margin-top: 1.5em;
   }
   
   
   
-  html body .popup form .product-items-edit .product-item-edit label {
+  html body .popup .popup-content .product-items-edit .product-item-edit label {
     display: none;
   }
   
@@ -100,7 +100,7 @@ html body .scroll-button {
 
   
   
-  html body .popup form {
+  html body .popup .popup-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -224,6 +224,25 @@ html body .stock-modal .stock-product .stock-product-amount .input-item input {
 
 html body .stock-modal .stock-product .stock-product-amount .input-item label {
   display: none;
+}
+
+html body .customers-modal details {
+  padding: 0.5em;
+}
+
+html body .customers-modal details.customer-order {
+  margin-left: 1em;
+  padding: 0.5em;
+}
+
+html body .customers-modal details.customer-order .order-date-picker {
+  display: inline-block;
+  width: 75%;
+  cursor: pointer;
+}
+
+html body .customers-modal details.customer-order .product-item-edit {
+  margin-left: 1em;
 }
 
 input::-webkit-outer-spin-button {
